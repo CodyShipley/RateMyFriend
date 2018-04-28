@@ -1,0 +1,26 @@
+<template name='profile'>
+{{#if currentUser}}
+
+  <div class="ui vertical masthead center aligned segment Site-content">
+
+    <div class="ui text container">
+      <h1 class="ui header">
+        Rate My Friend
+      </h1>
+
+
+
+  <div class="ui segment">
+  <img class="ui centered circular medium image" src="https://pbs.twimg.com/media/Dbg2IIFV0AEPti8.jpg:thumb">
+  <h1>{{username}}'s Profile</h1>
+  <h3>{{email}}</h3>
+  <p>Heres the rating you gave Matt Jones:</p>
+  <div class="ui massive heart rating" data-rating="1"></div>
+  </div>
+</div>
+  </div>
+{{/if}}
+
+
+
+</template>

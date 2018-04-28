@@ -1,0 +1,66 @@
+<template name='register'>
+  {{#if currentUser}}
+  <h3>You're already logged in. <a href={{pathFor route='home'}}></a>Head back!</h3>
+  {{else}}
+<div class="ui vertical masthead center aligned segment Site-content">
+
+  <div class="ui text container">
+    <h1 class="ui header">
+      Rate My Friend
+    </h1>
+
+
+<div class="ui segment">
+  <div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui image header">
+      <div class="content">
+        Register an account
+      </div>
+    </h2>
+    <form class="form-signup ui large form" id="register-form">
+      <div class="ui stacked secondary  segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" id='username' name="username" placeholder="User Name">
+          </div>
+        </div>  <div class="field">
+            <div class="ui left icon input">
+              <i class="envelope icon"></i>
+              <input type="text" id='email' name="email" placeholder="E-mail Address">
+            </div>
+          </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" id='password' name="password" placeholder="Password">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" id='password2' name="password2" placeholder="Confirm Password">
+          </div>
+        </div>
+        <button class="ui fluid large teal submit button" type="submit" name="button"  id="login-btn">Register</button>
+      </div>
+
+      <div class="ui error message"></div>
+
+    </form>
+
+    <div class="ui message">
+      Already have an account? <a href={{pathFor route='login'}}>Login</a>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+
+
+  </div>
+</div>
+{{/if}}
+</template>

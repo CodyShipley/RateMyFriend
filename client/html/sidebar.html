@@ -1,0 +1,42 @@
+<template name='sidebar'>
+  <div class="ui top attached demo menu">
+    <a class="item mainMenu">
+      <i class="sidebar icon"></i> Menu
+    </a>
+    <div class="right menu">
+      {{#if currentUser}}
+      <a class="ui item logout" href="{{pathFor route='home'}}" id='logout-link'>
+        Log Out
+      </a>
+      {{else}}
+      <a class="ui item" href="{{pathFor route='register'}}">
+        Register
+      </a>
+      <a class="ui item" href="{{pathFor route='login'}}">
+        Log-in
+      </a>
+      {{/if}}
+
+
+  </div>
+  </div>
+  <div class="ui bottom attached segment">
+    <div class="ui inverted labeled icon left inline vertical demo sidebar menu">
+      <a class="item" href="{{pathFor route='home'}}">
+        <i class="home icon"></i> Home
+      </a>
+      {{#if currentUser}}
+      <a class="item" href="{{pathFor route='profile'}}">
+        <i class="user outline icon" ></i> Your Profile
+      </a>
+      {{/if}}
+      <a class="item" href="{{pathFor route='jones'}}">
+        <i class="comments outline icon"></i> Rate Matt Jones
+      </a>
+    </div>
+    <div class="pusher Site">
+        {{> yield}}
+        {{> footer}}
+      </div>
+  </div>
+</template>
